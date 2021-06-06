@@ -35,12 +35,12 @@ while True:
 
 
 	while True:
-		X = input("choose one of the operation (add, sub, mul, div, fadd, fsub, fmul, fdiv): ")
+		X = random.choice(V)
 		if X == "add":
-			r1 = random.randint(1,1000)
-			r2 = random.randint(1,1500)
-			E = X + " " + str(r1) + " " + str(r2)
-			addition = r1 + r2
+			x1 = random.randint(1,1000)
+			x2 = random.randint(1,1500)
+			E = X + " " + str(x1) + " " + str(x2)
+			addition = x1 + x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ("result is", addition)
@@ -51,10 +51,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "sub":
-			r1 = random.randint(1,1500)
-			r2 = random.randint(1,1000)
-			E = X + " " + str(r1) + " " + str(r2)
-			subtraction = r1 - r2
+			x1 = random.randint(1,1500)
+			x2 = random.randint(1,1000)
+			E = X + " " + str(x1) + " " + str(x2)
+			subtraction = x1 - x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ("result is", subtraction)
@@ -65,10 +65,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "mul":
-			r1 = random.randint(1,1000)
-			r2 = random.randint(1,1500)
-			E = X + " " + str(r1) + " " + str(r2)
-			multiplication = r1 * r2
+			x1 = random.randint(1,1000)
+			x2 = random.randint(1,1500)
+			E = X + " " + str(x1) + " " + str(x2)
+			multiplication = x1 * x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ("result is", multiplication)
@@ -79,10 +79,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "div":
-			r1 = random.randint(1,1000)
-			r2 = random.randint(1,1500)
-			E = X + " " + str(r1) + " " + str(r2)
-			division = r1 / r2
+			x1 = random.randint(1,1000)
+			x2 = random.randint(1,1500)
+			E = X + " " + str(x1) + " " + str(x2)
+			division = x1 / x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ('result is %8.8g' %division)
@@ -93,10 +93,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "fadd":
-			r1 = random.uniform(1,1000)
-			r2 = random.uniform(1,1500)
-			E = X + " " + str(r1) + " " + str(r2)
-			faddition = r1 + r2
+			x1 = random.uniform(1,1000)
+			x2 = random.uniform(1,1500)
+			E = X + " " + str(x1) + " " + str(x2)
+			faddition = x1 + x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ('result is %8.8g' %faddition)
@@ -107,10 +107,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "fsub":
-			r1 = random.uniform(1,1500)
-			r2 = random.uniform(1,1000)
-			E = X + " " + str(r1) + " " + str(r2)
-			fsubtraction = r1 - r2
+			x1 = random.uniform(1,1500)
+			x2 = random.uniform(1,1000)
+			E = X + " " + str(x1) + " " + str(x2)
+			fsubtraction = x1 - x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ('result is %8.8g' %fsubtraction)
@@ -121,10 +121,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "fmul":
-			r1 = random.uniform(1,1000)
-			r2 = random.uniform(1,1500)
-			E = X + " " + str(r1) + " " + str(r2)
-			fmultiplication = r1 * r2
+			x1 = random.uniform(1,1000)
+			x2 = random.uniform(1,1500)
+			E = X + " " + str(x1) + " " + str(x2)
+			fmultiplication = x1 * x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ('result is %8.8g' %fmultiplication)
@@ -135,10 +135,10 @@ while True:
 				client.send("ERROR\n".encode())
 
 		elif X == "fdiv":
-			r1 = random.uniform(1,1000)
-			r2 = random.uniform(1,1500)
-			E = X + " " + str(r1) + " " + str(r2)
-			fdivision = r1 / r2
+			x1 = random.uniform(1,1000)
+			x2 = random.uniform(1,1500)
+			E = X + " " + str(x1) + " " + str(x2)
+			fdivision = x1 / x2
 			client.send(E.encode())
 			answer=client.recv(1024).decode()
 			print ('result is %8.8g' %fdivision)

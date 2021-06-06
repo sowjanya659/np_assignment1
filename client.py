@@ -33,22 +33,22 @@ while(True):
 			print("result is ",str(a) )
            
 		elif Y[0] == "sub":
-			b = int(Y[1])-int(Y[2])
-			b1=str(b)+"\n"
-			server.send(b1.encode())
-			print("result is ", str(b))
+			a = int(Y[1])-int(Y[2])
+			a1=str(a)+"\n"
+			server.send(a1.encode())
+			print("result is ", str(a))
           
 		elif Y[0] == "mul":
-			d = int(Y[1])*int(Y[2])
-			a1=str(d)+"\n"
+			a = int(Y[1])* int(Y[2])
+			a1=str(a)+"\n"
 			server.send(a1.encode())
-			print("result is ", str(d))
+			print("result is ", str(a))
           
 		elif Y[0] == "div":
-			e = int(Y[1])/int(Y[2])
-			a1=str(e)+"\n"
+			a = int(Y[1])/int(Y[2])
+			a1=str(a)+"\n"
 			server.send(a1.encode())   
-			print('result is %8.8g' %e)
+			print('result is %8.8g' %a)
            
 		elif Y[0] == "fadd":
 			fa = float(Y[1])+float(Y[2])
@@ -57,22 +57,22 @@ while(True):
 			print('result is %8.8g' %fa)
           
 		elif Y[0] == "fsub":
-			fb = float(Y[1])-float(Y[2])
-			a1=str(fb)+"\n"
+			fa = float(Y[1])-float(Y[2])
+			a1=str(fa)+"\n"
 			server.send(a1.encode())
-			print('result is %8.8g'%fb)
+			print('result is %8.8g'%fa)
             
 		elif Y[0] == "fmul":
-			fd = float(Y[1])*float(Y[2])
-			a1=str(fd)+"\n"
+			fa = float(Y[1])*float(Y[2])
+			a1=str(fa)+"\n"
 			server.send(a1.encode())
-			print('result is %8.8g' %fd)
+			print('result is %8.8g' %fa)
             
 		elif Y[0] == "fdiv":
-			fe = float(Y[1])/float(Y[2])
-			a1=str(fe)+"\n"
+			fa = float(Y[1])/float(Y[2])
+			a1=str(fa)+"\n"
 			server.send(a1.encode())
-			print('result is %8.8g' %fe)
+			print('result is %8.8g' %fa)
 
 
 		response = server.recv(1024).decode()
