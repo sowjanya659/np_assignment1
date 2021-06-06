@@ -1,4 +1,5 @@
+PYTHON = python3
 run:
-        python3 server.py 127.0.0.1:5050
+	${PYTHON} server 127.0.0.1:5050
 user:
-        python3 client.py 127.0.0.1:5050
+	${PYTHON} client 127.0.0.1:5050
